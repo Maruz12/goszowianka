@@ -147,7 +147,7 @@ nav{
 .hero-img{
     flex: 1;
     display: flex;
-    background-image: url("pensjonat_2,2.jpg");
+    background-image: url("pierwsze.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -462,7 +462,9 @@ h1{
 .slide{
     min-width: 100%;
     height: 100%;
+    width: 100%;
     flex-shrink: 0;
+    overflow: hidden;
 }
 .slide img{
     width: 100%;
@@ -599,14 +601,18 @@ a{
     overflow: hidden;
     border-radius: 0.5rem;
 }
-.gallery-slider .slide{
+.gallery-slider .slide,
+.oferta-slider .slide{
     position: relative;
 }
-.gallery-slider .slide img{
+.gallery-slider .slide img,
+.oferta-slider .slide img{
     cursor: zoom-in;
 }
 .gallery-slider .slide::before,
-.gallery-slider .slide::after{
+.gallery-slider .slide::after,
+.oferta-slider .slide::before,
+.oferta-slider .slide::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -617,14 +623,16 @@ a{
     pointer-events: none;
     z-index: 3;
 }
-.gallery-slider .slide::before{
+.gallery-slider .slide::before,
+.oferta-slider .slide::before{
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid rgba(255, 255, 255, 0.95);
 }
-.gallery-slider .slide::after{
+.gallery-slider .slide::after,
+.oferta-slider .slide::after{
     width: 0.9rem;
     height: 0.9rem;
     border: 2px solid rgba(255, 255, 255, 0.95);
@@ -634,7 +642,9 @@ a{
     box-shadow: 0.55rem 0.55rem 0 0 rgba(255, 255, 255, 0.95);
 }
 .gallery-slider .slide:hover::before,
-.gallery-slider .slide:hover::after{
+.gallery-slider .slide:hover::after,
+.oferta-slider .slide:hover::before,
+.oferta-slider .slide:hover::after{
     opacity: 1;
 }
 
@@ -773,7 +783,4 @@ footer{
     font-weight: 500;
     transition: all 0.2s;
 }
-
-
-
 
