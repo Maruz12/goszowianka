@@ -144,17 +144,23 @@ nav{
     width: 45%;
     height: 10rem;
 }
-.hero-img{
+.hero-img, .hero-img1{
     flex: 1;
     display: flex;
-    background-image: url("pierwsze.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     border-radius: 1rem;
     height: 45rem;
     border: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.hero-img1{
+    display: none;
+}
+.hero-image{
+    width: 100%;    /* Zmuś zdjęcie do wypełnienia szerokości diva */
+    height: 100%;   /* Zmuś zdjęcie do wypełnienia wysokości diva */
+    object-fit: cover; /* KLUCZOWE: zdjęcie zachowa proporcje, wypełni div, a nadmiar zostanie przycięty */
+    object-position: center;
 }
 h1{
     font-size: 3.7rem;
@@ -287,15 +293,21 @@ h1{
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-.about-img{
+.about-img, .about-img1{
     flex: 1;
     display: flex;
-    background-image: url("FAJNE.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     border-radius: 1rem;
     height: 42rem;
+    overflow: hidden;
+}
+.about-img1{
+    display: none;
+}
+.about-image{
+    width: 100%;    /* Zmuś zdjęcie do wypełnienia szerokości diva */
+    height: 100%;   /* Zmuś zdjęcie do wypełnienia wysokości diva */
+    object-fit: cover; /* KLUCZOWE: zdjęcie zachowa proporcje, wypełni div, a nadmiar zostanie przycięty */
+    object-position: center;
 }
 .about-text{
     display: flex;
@@ -784,3 +796,362 @@ footer{
     transition: all 0.2s;
 }
 
+/* Laptop */
+@media (max-width: 1280px) {
+    .hero,
+    .about-main,
+    .features,
+    .footer-main {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .text2 {
+        font-size: 4rem;
+    }
+
+    .text3 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    .text6,
+    .text7,
+    .text14 {
+        font-size: 2.6rem;
+    }
+
+    .offer-main {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .offer-main > *:nth-child(3) {
+        grid-column: 1 / span 2; /* Element zajmuje od 1. linii do 2. linii (cała szerokość) */
+
+        /* Jeśli chcesz, żeby sam element był wąski, ale na środku: */
+        width: 50%; /* Przykładowa szerokość */
+        justify-self: center;
+    }
+
+    .oferta-slider {
+        height: 18rem;
+    }
+
+    .gallery-slider {
+        width: 85%;
+        height: 32rem;
+    }
+
+    .features-map iframe {
+        height: 30rem;
+    }
+    .hero-img, .about-img{
+        height: 40rem;
+        align-self: center;
+    }
+    .hero-buttons{
+        flex-wrap: wrap;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .nav-link{
+        display: none;
+    }
+    .hero-mm{
+        display: none;
+    }
+    .hero-container{
+        flex: none;
+        width: 40%;
+    }
+    .about-main,
+    .features-main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        width: 100%;
+        gap: 1.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        flex-direction: row;
+    }
+
+    .hero-img {
+        width: 50%;
+        height: 30rem;
+        flex: none;
+    }
+    .hero-text-box{
+        flex: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .hero-buttons{
+        flex-wrap: wrap;
+    }
+    .hero-left, .hero-middle{
+        display: flex;
+        width: 60%;
+        font-size: 1.3rem;
+        justify-content: center;
+    }
+    .rating-btn{
+        padding-left: 0;
+    }
+    .text1 {
+        font-size: 1rem;
+    }
+
+    .text2 {
+        font-size: 3.2rem;
+        line-height: 2.8rem;
+        padding-bottom: 1.8rem;
+    }
+
+    .text3 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .text6,
+    .text7,
+    .text14,
+    .text5{
+        font-size: 2.2rem;
+    }
+
+    .offer,
+    .gallery,
+    .features {
+        width: 92%;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    .about-img{
+        display: none;
+    }
+    .about-img1{
+        display: flex;
+        flex: none;
+        width: 70%;
+        height: 30rem;
+    }
+    .about-text{
+        flex: 0;
+        align-items: center;
+    }
+
+
+
+    .oferta-slider {
+        height: 16rem;
+    }
+
+    .gallery-slider {
+        width: 100%;
+        height: 24rem;
+    }
+
+    .features-map iframe {
+        height: 30rem;
+    }
+    .features-map{
+        width: 85%;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100%;
+    }
+    .footer-main {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .gallery-slider {
+        height: 30rem;
+        width: 90%;
+    }
+    .text4{}
+
+}
+
+/* Telefon */
+@media (max-width: 768px) {
+    .hero{
+        width: 90%;
+    }
+    .hero-img{
+        display: none;
+    }
+    .hero-img1{
+        display: flex;
+        margin-top: 2rem;
+        flex: none;
+        height: 20rem;
+        width: 90%;
+        align-self: center;
+    }
+    .hero-container{
+        flex: 1;
+
+    }
+    .hero-mm{
+        display: none;
+    }
+    .nav-link{
+        display: none;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-left,
+    .hero-middle {
+        width: 60%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        line-height: 2.1rem;
+        text-align: center;
+    }
+
+    .text2 {
+        font-size: 2.5rem;
+        line-height: 2.2rem;
+    }
+    .text1{
+        text-align: center;
+    }
+    .about-img{
+        display: none;
+    }
+    .about-img1{
+        display: flex;
+        height: 20rem;
+        width: 90%;
+    }
+    .text3 {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+    .features-map {
+        width: 100%;
+        height: 24rem;
+
+    }
+    .text4,
+    .text5,
+    .about-list-item,
+    .features-list-item,
+    .room-lista-item,
+    .contact-list-item,
+    .social-list-item,
+    .godziny-list-item {
+        font-size: 0.95rem;
+    }
+    .offer-main{
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+    .contact-list, .social-list, .godziny-list{
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+    }
+    .social-list{}
+    .text6,
+    .text7,
+    .text14 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .room-card {
+        padding: 1rem;
+    }
+
+    .text12 {
+        font-size: 1.6rem;
+    }
+
+    .text13 {
+        font-size: 1rem;
+    }
+
+    .oferta-slider {
+        height: 13rem;
+    }
+
+    .gallery-slider {
+        height: 18rem;
+        width: 90%;
+    }
+
+    .features-map iframe {
+        height: 18rem;
+    }
+
+    .lightbox-arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.4rem;
+    }
+
+    .lightbox-arrow.left {
+        left: 0.7rem;
+    }
+
+    .lightbox-arrow.right {
+        right: 0.7rem;
+    }
+
+    .lightbox-close {
+        top: 0.8rem;
+        right: 0.8rem;
+    }
+    .offer-main > *:nth-child(3) {
+        /* Resetowanie siatki: auto oznacza powrót do domyślnego zachowania grid */
+        grid-column: auto;
+
+        /* Resetowanie szerokości: powrót do 100% szerokości rodzica/automatycznej */
+        width: auto;
+
+        /* Resetowanie wyrównania: stretch to domyślna wartość dla elementów grid */
+        justify-self: stretch;
+    }
+    .footer-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .oferta-slider{
+        width: 90%;
+    }
+}
+@media (max-width: 600px){
+    .offer-main{
+        width: 100%;
+    }
+    .gallery-slider{
+        width: 100%;
+    }
+}
