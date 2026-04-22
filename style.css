@@ -818,6 +818,9 @@ footer{
         font-size: 2rem;
         line-height: 2.4rem;
     }
+    .text4{
+        font-size: 1.1rem;
+    }
 
     .text6,
     .text7,
@@ -849,10 +852,16 @@ footer{
     .features-map iframe {
         height: 30rem;
     }
-    .hero-img, .about-img{
+    .hero-img{
         height: 40rem;
         align-self: center;
     }
+    .about-img{
+        align-self: center;
+        height: 40rem;
+        display: flex;
+    }
+
     .hero-buttons{
         flex-wrap: wrap;
     }
@@ -1002,7 +1011,7 @@ footer{
         margin-top: 2rem;
         flex: none;
         height: 20rem;
-        width: 90%;
+        width: 80%;
         align-self: center;
     }
     .hero-container{
@@ -1026,7 +1035,7 @@ footer{
 
     .hero-left,
     .hero-middle {
-        width: 60%;
+        width: 55%;
         text-align: center;
     }
 
@@ -1068,7 +1077,7 @@ footer{
     .contact-list-item,
     .social-list-item,
     .godziny-list-item {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
     }
     .offer-main{
         grid-template-columns: 1fr;
@@ -1146,6 +1155,9 @@ footer{
     .oferta-slider{
         width: 90%;
     }
+    .text5{
+        font-size: 1.5rem;
+    }
 }
 @media (max-width: 600px){
     .offer-main{
@@ -1154,4 +1166,13 @@ footer{
     .gallery-slider{
         width: 100%;
     }
+    .hero-img1{
+        width: 95%;
+    }
+    .hero-left,
+    .hero-middle {
+        width: 55%;
+        text-align: center;
+    }
+
 }
